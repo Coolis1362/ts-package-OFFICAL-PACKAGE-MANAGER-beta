@@ -98,6 +98,15 @@ def ts_package():
                     sys.exit(0)
             except Exception as e:
                 print(f"Error occurred: {e}")
+        if user_input == "help":
+            print("install Coolis1362/")
+            print("git")
+            print("|-git init")
+            print("upgrade")
+            print("| upgrade -pre-stable")
+            print("| upgrade -stable")
+            print("| upgrade -dev")
+            print("| upgrade -beta") 
 
 
 
