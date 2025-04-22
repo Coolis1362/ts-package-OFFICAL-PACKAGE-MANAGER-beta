@@ -25,6 +25,7 @@ def ts_package():
     VERSION = "1.0.1"
     GITHUBURL = "https://github.com/Coolis1362/ts-package-OFFICAL-PACKAGE-MANAGER"
     print(f"ts-package PACKAGE MANAGER VERSION: {VERSION}")
+    print("Type In 'help' For Commands")
 
     while True:
         user_input = input(">> ts-package ")
