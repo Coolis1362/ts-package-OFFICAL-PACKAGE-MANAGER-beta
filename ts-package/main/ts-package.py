@@ -23,6 +23,7 @@ def check_for_git():
 
 def ts_package():
     VERSION = "1.0.1"
+    GITHUBURL = "https://github.com/Coolis1362/ts-package-OFFICAL-PACKAGE-MANAGER"
     print(f"ts-package PACKAGE MANAGER VERSION: {VERSION}")
 
     while True:
@@ -60,7 +61,7 @@ def ts_package():
             print("Rechecking For git...")
             try:
                 if check_for_git():
-                    os.system("git init")
+                    os.system(f"git clone {GITHUBURL}-pre-stable")
                 else:
                     print("git can't be found existing")
                     time.sleep(1)
