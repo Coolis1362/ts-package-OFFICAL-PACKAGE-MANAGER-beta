@@ -51,11 +51,22 @@ def ts_package():
                     if check_for_git():
                         os.system("git init")
                     else:
-                        print("git can't be found exiting")
+                        print("git can't be found existing")
                         time.sleep(1)
                         sys.exit(0)
                 except Exception as e:
                     print(f"Error occurred: {e}")
+        if user_input == "upgrade -pre-stable":
+            print("Rechecking For git...")
+            try:
+                if check_for_git():
+                    os.system("git init")
+                else:
+                    print("git can't be found existing")
+                    time.sleep(1)
+                    sys.exit(0)
+            except Exception as e:
+                print(f"Error occurred: {e}")
 
 
 
