@@ -68,6 +68,36 @@ def ts_package():
                     sys.exit(0)
             except Exception as e:
                 print(f"Error occurred: {e}")
+        if user_input == "upgrade -stable":
+            try:
+                if check_for_git():
+                    os.system(f"git clone {GITHUBURL}")
+                else:
+                    print("git can't be found existing")
+                    time.sleep(1)
+                    sys.exit(0)
+            except Exception as e:
+                print(f"Error occurred: {e}")
+        if user_input == "upgrade -dev":
+            try:
+                if check_for_git():
+                    os.system(f"git clone {GITHUBURL}-dev")
+                else:
+                    print("git can't be found existing")
+                    time.sleep(1)
+                    sys.exit(0)
+            except Exception as e:
+                print(f"Error occurred: {e}")
+        if user_input == "upgrade -beta":
+            try:
+                if check_for_git():
+                    os.system(f"git clone {GITHUBURL}-beta")
+                else:
+                    print("git can't be found existing")
+                    time.sleep(1)
+                    sys.exit(0)
+            except Exception as e:
+                print(f"Error occurred: {e}")
 
 
 
